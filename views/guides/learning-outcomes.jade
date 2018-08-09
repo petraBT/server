@@ -1,0 +1,18 @@
+extends ../layouts/layout
+
+block head
+  title Learning Outcomes &middot; #{application}
+
+block styles
+
+block content
+  .mini-tron
+    .container
+      h1 Linear Algebra Learning Outcomes
+      p
+        | A set of possible learning outcomes for a Linear Algebra course
+
+  .container
+    .row
+      .col-md-12
+        include:markdown learning-outcomes.md

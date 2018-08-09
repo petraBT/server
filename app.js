@@ -350,6 +350,7 @@ app.use(helmet.contentSecurityPolicy({ directives: {
     'http://userserve-ak.last.fm',
     'http://graph.facebook.com',
     'https://graph.facebook.com',
+    'https://platform-lookaside.fbsbx.com/',
     'http://*.fbcdn.net',
     'https://*.fbcdn.net',
     'http://*.ytimg.com',      
@@ -371,7 +372,8 @@ app.use(helmet.contentSecurityPolicy({ directives: {
     'http://linear.pugetsound.edu/',
     'https://linear.pugetsound.edu/',
     'http://www.overleaf.com/',
-    'https://www.overleaf.com/',      
+    'https://www.overleaf.com/',
+    'https://*.githubusercontent.com/',
   ],
   mediaSrc: [
     "'self'"
@@ -528,7 +530,7 @@ if (app.get('env') === 'production') {
     res.status(err.status || 500);
     debug('Error: ' + (err.status || 500).toString() + ' ' + err);
     res.render('error/500', {
-      error: {}  // don't leak information
+      error: err
     });
   });
 }

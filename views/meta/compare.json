@@ -1,0 +1,9 @@
+{
+  "title": "Comparison of Textbook Content",
+  "_id": "compare",
+  "authors": [
+    "David Farmer"
+  ],
+  "coverUrl": "/img/comp-thumbnail.png",    
+  "contentUrl": "./compare-books.htm"
+}
